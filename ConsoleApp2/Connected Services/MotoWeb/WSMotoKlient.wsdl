@@ -1,0 +1,3349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://moto-profil.pl/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://moto-profil.pl/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://moto-profil.pl/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="ZwrocStanCeny">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_kontrahenta_motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lista_nr_motonet" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ZwrocStanCenyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZwrocStanCenyResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocStanCenyKarton">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_kontrahenta_motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lista_nr_motonet" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocStanCenyKartonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZwrocStanCenyKartonResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocStanCenyKOIP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_kontrahenta_motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lista_nr_motonet" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="ip" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocStanCenyKOIPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZwrocStanCenyKOIPResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocStanCenyDostepnoscIP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_kontrahenta_motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lista_nr_motonet" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="ip" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocStanCenyDostepnoscIPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZwrocStanCenyDostepnoscIPResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocStanCenyDostepnosc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_kontrahenta_motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lista_nr_motonet" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocStanCenyDostepnoscResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZwrocStanCenyDostepnoscResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocStanCenyPB">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_kontrahenta_motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lista_nr_motonet" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocStanCenyPBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZwrocStanCenyPBResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocStanCenySerwer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_kontrahenta_motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lista_nr_motonet" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="autor" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocStanCenySerwerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZwrocStanCenySerwerResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocNumeryFaktur">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_kontrahenta_motonet" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="data" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocNumeryFakturResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZwrocNumeryFakturResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocNumeryFakturFlota">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_kontrahenta_motonet" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="data" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocNumeryFakturFlotaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZwrocNumeryFakturFlotaResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocNumeryLZ">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_kontrahenta_motonet" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="data" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocNumeryLZResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZwrocNumeryLZResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocNumeryFKZ">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_kontrahenta_motonet" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="data" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocNumeryFKZResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZwrocNumeryFKZResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocPozycjeLZ">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_kontrahenta_motonet" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="identyfikator" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocPozycjeLZResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZwrocPozycjeLZResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocPozycjeFKZ">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_kontrahenta_motonet" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="identyfikator" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocPozycjeFKZResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZwrocPozycjeFKZResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocPozycjeFaktury">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_kontrahenta_motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numer_ksiegowy" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocPozycjeFakturyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZwrocPozycjeFakturyResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocPozycjeFakturyFlota">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_kontrahenta_motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numer_ksiegowy" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocPozycjeFakturyFlotaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZwrocPozycjeFakturyFlotaResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZamowTowary">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_kontrahenta_motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lista_nr_motonet_ilosc" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZamowTowaryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZamowTowaryResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZamowTowaryMultiMag">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_kontrahenta_motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lista_nr_motonet_ilosc" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZamowTowaryMultiMagResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZamowTowaryMultiMagResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZamowTowaryPrzekierowanie">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_kontrahenta_motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lista_nr_motonet_ilosc" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_przekierowanego" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZamowTowaryPrzekierowanieResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZamowTowaryPrzekierowanieResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZamowTowaryPB">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_kontrahenta_motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lista_nr_motonet_ilosc" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_przekierowanego" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZamowTowaryPBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZamowTowaryPBResult" type="tns:ArrayOfString" />
+            <s:element minOccurs="1" maxOccurs="1" name="oczekujace_utworzone" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZamowTowaryPBNrZamowienia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_kontrahenta_motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lista_nr_motonet_ilosc" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_przekierowanego" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_zamowienia" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZamowTowaryPBNrZamowieniaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZamowTowaryPBNrZamowieniaResult" type="tns:ArrayOfString" />
+            <s:element minOccurs="1" maxOccurs="1" name="oczekujace_utworzone" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZamowTowaryKOIPNrZamowienia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_kontrahenta_motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lista_nr_motonet_ilosc" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_przekierowanego" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_zamowienia" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZamowTowaryKOIPNrZamowieniaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZamowTowaryKOIPNrZamowieniaResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZamowTowaryMC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_kontrahenta_motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lista_nr_motonet_ilosc" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_przekierowanego" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZamowTowaryMCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZamowTowaryMCResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZamowTowaryGP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_kontrahenta_motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lista_nr_motonet_ilosc" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_przekierowanego" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZamowTowaryGPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZamowTowaryGPResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZamowTowaryPBGP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_kontrahenta_motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lista_nr_motonet_ilosc" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_przekierowanego" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZamowTowaryPBGPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZamowTowaryPBGPResult" type="tns:ArrayOfString" />
+            <s:element minOccurs="1" maxOccurs="1" name="oczekujace" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZamowTowaryMO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_kontrahenta_motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lista_nr_motonet_ilosc" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_przekierowanego" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZamowTowaryMOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZamowTowaryMOResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZamowTowaryZPotwierdzeniemEmailKOIPUwagi">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_kontrahenta_motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_przkierowanego" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lista_nr_motonet_ilosc" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="ip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="uwagi_mail" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZamowTowaryZPotwierdzeniemEmailKOIPUwagiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZamowTowaryZPotwierdzeniemEmailKOIPUwagiResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocDepozyty">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_kontrahenta_motonet" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="data" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocDepozytyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZwrocDepozytyResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocInformacjeKontrahenta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_kontrahenta_motonet" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocInformacjeKontrahentaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZwrocInformacjeKontrahentaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Test">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="numer" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZarejestrujPlanowaneZamowienieMC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_kontrahenta_motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numer_przekierowanego" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lista_nr_motonet_ilosc" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZarejestrujPlanowaneZamowienieMCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ZarejestrujPlanowaneZamowienieMCResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZarejestrujPlanowaneZamowienieKO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_kontrahenta_motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numer_przekierowanego" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lista_nr_motonet_ilosc" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZarejestrujPlanowaneZamowienieKOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ZarejestrujPlanowaneZamowienieKOResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutoryzacjaKlient">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="kod" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="wersja" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="motonet" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutoryzacjaKlientResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AutoryzacjaKlientResult" type="s:base64Binary" />
+            <s:element minOccurs="1" maxOccurs="1" name="poprawny" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PotwierdzZamowienie">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_kontrahenta_motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="zamowienie_guid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PotwierdzZamowienieResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PotwierdzZamowienieResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocString">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="s" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocStringResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZwrocStringResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutoryzacjaKlientFilia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_kontrahenta_motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nazwa_filli" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutoryzacjaKlientFiliaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AutoryzacjaKlientFiliaResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocNoweFaktury">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocNoweFakturyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZwrocNoweFakturyResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocDaneFakturyDostawcy">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="numerFaktury" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocDaneFakturyDostawcyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZwrocDaneFakturyDostawcyResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocDaneFakturyDostawcyKomis">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dokspId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocDaneFakturyDostawcyKomisResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZwrocDaneFakturyDostawcyKomisResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocPozycjeFakturyDostawcy">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idFaktury" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocPozycjeFakturyDostawcyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZwrocPozycjeFakturyDostawcyResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SprawdzPobranieFaktury">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="numer_fa" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SprawdzPobranieFakturyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SprawdzPobranieFakturyResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PotwierdzenieOdbioruDokumentu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="numer" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PotwierdzenieOdbioruDokumentuResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ZwrocDaneArtykulu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lista" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocDaneArtykuluResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZwrocDaneArtykuluResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DajSlownikMarek">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jezyk" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DajSlownikMarekResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DajSlownikMarekResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DajSlownikGenerykow">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jezyk" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DajSlownikGenerykowResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DajSlownikGenerykowResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocStany">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocStanyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZwrocStanyResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocNaglowkiLZ">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="data_wprowadzenia" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocNaglowkiLZResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZwrocNaglowkiLZResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PobierzDaneLZ">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="motonet" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="doksp_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PobierzDaneLZResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PobierzDaneLZResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZapiszPobranieDanychLZ">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="motonet" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pobrane_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZapiszPobranieDanychLZResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ZapiszPobranieDanychLZResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InformacjaOKontrahencie">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_motonet" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InformacjaOKontrahencieResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InformacjaOKontrahencieResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InvoiceCommision">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="param" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InvoiceCommisionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InvoiceCommisionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZafakturujSprzedazKomisowaNew">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pozycje" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZafakturujSprzedazKomisowaNewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZafakturujSprzedazKomisowaNewResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bledy" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ZafakturujSprzedazKomisowaNewPrzygotowanie">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pozycje" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZafakturujSprzedazKomisowaNewPrzygotowanieResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ZafakturujSprzedazKomisowaNewPrzygotowanieResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="bledy" type="tns:ArrayOfInt" />
+            <s:element minOccurs="1" maxOccurs="1" name="idFakturowania" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WystawFakturaKoncowaKomis">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dokspIdPrzygotowanie" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idFakturowania" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WystawFakturaKoncowaKomisResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="WystawFakturaKoncowaKomisResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pozIdCena" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PobierzWzKomisowa">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PobierzWzKomisowaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PobierzWzKomisowaResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PobierzWZKomisoweDoSkanowania">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PobierzWZKomisoweDoSkanowaniaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PobierzWZKomisoweDoSkanowaniaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PobierzPozycjeWZKomis">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dokmag_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PobierzPozycjeWZKomisResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PobierzPozycjeWZKomisResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PotwierdzPobranieWZKomis">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dokmag_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PotwierdzPobranieWZKomisResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AnulujPobranieWZKomisowej">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numer" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AnulujPobranieWZKomisowejResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ZwrocNiepobraneFakturyKomisowe">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocNiepobraneFakturyKomisoweResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZwrocNiepobraneFakturyKomisoweResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocWartoscKomisu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocWartoscKomisuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZwrocWartoscKomisuResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocSkasowanePozycjeKomis">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocSkasowanePozycjeKomisResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZwrocSkasowanePozycjeKomisResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocDokumentyPoGUID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocDokumentyPoGUIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZwrocDokumentyPoGUIDResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocWszystkiePozycjeKomisowe">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocWszystkiePozycjeKomisoweResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZwrocWszystkiePozycjeKomisoweResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocDostawyKontrahenta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="motonet" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocDostawyKontrahentaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZwrocDostawyKontrahentaResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocDostawyKontrahentaModel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="motonet" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocDostawyKontrahentaModelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZwrocDostawyKontrahentaModelResult" type="tns:ArrayOfDostawaModelWS" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDostawaModelWS">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DostawaModelWS" nillable="true" type="tns:DostawaModelWS" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DostawaModelWS">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Nazwa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Godzina" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DzienTygodnia" type="tns:DzienDostawyWS" />
+          <s:element minOccurs="0" maxOccurs="1" name="Opis" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MagazynZrodlowyNazwa" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MagazynCentralny" type="s1:char" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DzienDostawyWS">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Poniedzialek" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Wtorek" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Sroda" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Czwartek" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Piatek" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Sobota" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ZwrocSzczegolyZamowieniaModel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocSzczegolyZamowieniaModelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZwrocSzczegolyZamowieniaModelResult" type="tns:ZamowienieOdpowiedzModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ZamowienieOdpowiedzModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Guid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="listaArtykulow" type="tns:ArrayOfArtykulOdpowiedz" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfArtykulOdpowiedz">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ArtykulOdpowiedz" nillable="true" type="tns:ArtykulOdpowiedz" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArtykulOdpowiedz">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusArtykulu" type="tns:ArtykulStatus" />
+          <s:element minOccurs="0" maxOccurs="1" name="PrefiksIndeks" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PrefiksIndeksZastepnik" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Ilosc" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CenaDetaliczna" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="CenaKlienta" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="StawkaVat" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dostepnosc" type="tns:ArrayOfArtykulDostepnosc" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArtykulStatus">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Oferowany" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Aktywny" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Istnieje" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfArtykulDostepnosc">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ArtykulDostepnosc" nillable="true" type="tns:ArtykulDostepnosc" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArtykulDostepnosc">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Ilosc" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="MagazynZrodlowyNazwa" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Centrala" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ZwrocSzczegolyZamowieniaLista">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZwrocSzczegolyZamowieniaListaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZwrocSzczegolyZamowieniaListaResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WystawFakture">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WystawFaktureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WystawFaktureResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocuments">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="date_from" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="date_to" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocumentsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDocumentsResult" type="tns:ArrayOfDocumentModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDocumentModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DocumentModel" nillable="true" type="tns:DocumentModel" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DocumentModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeliveryNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IssueDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeliveryDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocumentItemsList" type="tns:ArrayOfDocumentItemModel" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDocumentItemModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DocumentItemModel" nillable="true" type="tns:DocumentItemModel" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DocumentItemModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="OrderNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderLineItemNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Quantity" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Price" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="UnitOfMeasure" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ZafakturujGuid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fiks" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nr_kontrahenta_motonet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numery" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZafakturujGuidResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ZafakturujGuidResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SprawdzWersje">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="param" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SprawdzWersjeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SprawdzWersjeResult" type="tns:ArrayOfWersjaWS" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfWersjaWS">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="WersjaWS" nillable="true" type="tns:WersjaWS" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="WersjaWS">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NazwaPliku" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Wersja" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="char">
+        <s:restriction base="s:unsignedShort" />
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ZwrocStanCenySoapIn">
+    <wsdl:part name="parameters" element="tns:ZwrocStanCeny" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocStanCenySoapOut">
+    <wsdl:part name="parameters" element="tns:ZwrocStanCenyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocStanCenyKartonSoapIn">
+    <wsdl:part name="parameters" element="tns:ZwrocStanCenyKarton" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocStanCenyKartonSoapOut">
+    <wsdl:part name="parameters" element="tns:ZwrocStanCenyKartonResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocStanCenyKOIPSoapIn">
+    <wsdl:part name="parameters" element="tns:ZwrocStanCenyKOIP" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocStanCenyKOIPSoapOut">
+    <wsdl:part name="parameters" element="tns:ZwrocStanCenyKOIPResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocStanCenyDostepnoscIPSoapIn">
+    <wsdl:part name="parameters" element="tns:ZwrocStanCenyDostepnoscIP" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocStanCenyDostepnoscIPSoapOut">
+    <wsdl:part name="parameters" element="tns:ZwrocStanCenyDostepnoscIPResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocStanCenyDostepnoscSoapIn">
+    <wsdl:part name="parameters" element="tns:ZwrocStanCenyDostepnosc" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocStanCenyDostepnoscSoapOut">
+    <wsdl:part name="parameters" element="tns:ZwrocStanCenyDostepnoscResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocStanCenyPBSoapIn">
+    <wsdl:part name="parameters" element="tns:ZwrocStanCenyPB" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocStanCenyPBSoapOut">
+    <wsdl:part name="parameters" element="tns:ZwrocStanCenyPBResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocStanCenySerwerSoapIn">
+    <wsdl:part name="parameters" element="tns:ZwrocStanCenySerwer" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocStanCenySerwerSoapOut">
+    <wsdl:part name="parameters" element="tns:ZwrocStanCenySerwerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocNumeryFakturSoapIn">
+    <wsdl:part name="parameters" element="tns:ZwrocNumeryFaktur" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocNumeryFakturSoapOut">
+    <wsdl:part name="parameters" element="tns:ZwrocNumeryFakturResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocNumeryFakturFlotaSoapIn">
+    <wsdl:part name="parameters" element="tns:ZwrocNumeryFakturFlota" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocNumeryFakturFlotaSoapOut">
+    <wsdl:part name="parameters" element="tns:ZwrocNumeryFakturFlotaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocNumeryLZSoapIn">
+    <wsdl:part name="parameters" element="tns:ZwrocNumeryLZ" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocNumeryLZSoapOut">
+    <wsdl:part name="parameters" element="tns:ZwrocNumeryLZResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocNumeryFKZSoapIn">
+    <wsdl:part name="parameters" element="tns:ZwrocNumeryFKZ" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocNumeryFKZSoapOut">
+    <wsdl:part name="parameters" element="tns:ZwrocNumeryFKZResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocPozycjeLZSoapIn">
+    <wsdl:part name="parameters" element="tns:ZwrocPozycjeLZ" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocPozycjeLZSoapOut">
+    <wsdl:part name="parameters" element="tns:ZwrocPozycjeLZResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocPozycjeFKZSoapIn">
+    <wsdl:part name="parameters" element="tns:ZwrocPozycjeFKZ" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocPozycjeFKZSoapOut">
+    <wsdl:part name="parameters" element="tns:ZwrocPozycjeFKZResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocPozycjeFakturySoapIn">
+    <wsdl:part name="parameters" element="tns:ZwrocPozycjeFaktury" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocPozycjeFakturySoapOut">
+    <wsdl:part name="parameters" element="tns:ZwrocPozycjeFakturyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocPozycjeFakturyFlotaSoapIn">
+    <wsdl:part name="parameters" element="tns:ZwrocPozycjeFakturyFlota" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocPozycjeFakturyFlotaSoapOut">
+    <wsdl:part name="parameters" element="tns:ZwrocPozycjeFakturyFlotaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZamowTowarySoapIn">
+    <wsdl:part name="parameters" element="tns:ZamowTowary" />
+  </wsdl:message>
+  <wsdl:message name="ZamowTowarySoapOut">
+    <wsdl:part name="parameters" element="tns:ZamowTowaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZamowTowaryMultiMagSoapIn">
+    <wsdl:part name="parameters" element="tns:ZamowTowaryMultiMag" />
+  </wsdl:message>
+  <wsdl:message name="ZamowTowaryMultiMagSoapOut">
+    <wsdl:part name="parameters" element="tns:ZamowTowaryMultiMagResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZamowTowaryPrzekierowanieSoapIn">
+    <wsdl:part name="parameters" element="tns:ZamowTowaryPrzekierowanie" />
+  </wsdl:message>
+  <wsdl:message name="ZamowTowaryPrzekierowanieSoapOut">
+    <wsdl:part name="parameters" element="tns:ZamowTowaryPrzekierowanieResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZamowTowaryPBSoapIn">
+    <wsdl:part name="parameters" element="tns:ZamowTowaryPB" />
+  </wsdl:message>
+  <wsdl:message name="ZamowTowaryPBSoapOut">
+    <wsdl:part name="parameters" element="tns:ZamowTowaryPBResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZamowTowaryPBNrZamowieniaSoapIn">
+    <wsdl:part name="parameters" element="tns:ZamowTowaryPBNrZamowienia" />
+  </wsdl:message>
+  <wsdl:message name="ZamowTowaryPBNrZamowieniaSoapOut">
+    <wsdl:part name="parameters" element="tns:ZamowTowaryPBNrZamowieniaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZamowTowaryKOIPNrZamowieniaSoapIn">
+    <wsdl:part name="parameters" element="tns:ZamowTowaryKOIPNrZamowienia" />
+  </wsdl:message>
+  <wsdl:message name="ZamowTowaryKOIPNrZamowieniaSoapOut">
+    <wsdl:part name="parameters" element="tns:ZamowTowaryKOIPNrZamowieniaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZamowTowaryMCSoapIn">
+    <wsdl:part name="parameters" element="tns:ZamowTowaryMC" />
+  </wsdl:message>
+  <wsdl:message name="ZamowTowaryMCSoapOut">
+    <wsdl:part name="parameters" element="tns:ZamowTowaryMCResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZamowTowaryGPSoapIn">
+    <wsdl:part name="parameters" element="tns:ZamowTowaryGP" />
+  </wsdl:message>
+  <wsdl:message name="ZamowTowaryGPSoapOut">
+    <wsdl:part name="parameters" element="tns:ZamowTowaryGPResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZamowTowaryPBGPSoapIn">
+    <wsdl:part name="parameters" element="tns:ZamowTowaryPBGP" />
+  </wsdl:message>
+  <wsdl:message name="ZamowTowaryPBGPSoapOut">
+    <wsdl:part name="parameters" element="tns:ZamowTowaryPBGPResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZamowTowaryMOSoapIn">
+    <wsdl:part name="parameters" element="tns:ZamowTowaryMO" />
+  </wsdl:message>
+  <wsdl:message name="ZamowTowaryMOSoapOut">
+    <wsdl:part name="parameters" element="tns:ZamowTowaryMOResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZamowTowaryZPotwierdzeniemEmailKOIPUwagiSoapIn">
+    <wsdl:part name="parameters" element="tns:ZamowTowaryZPotwierdzeniemEmailKOIPUwagi" />
+  </wsdl:message>
+  <wsdl:message name="ZamowTowaryZPotwierdzeniemEmailKOIPUwagiSoapOut">
+    <wsdl:part name="parameters" element="tns:ZamowTowaryZPotwierdzeniemEmailKOIPUwagiResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocDepozytySoapIn">
+    <wsdl:part name="parameters" element="tns:ZwrocDepozyty" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocDepozytySoapOut">
+    <wsdl:part name="parameters" element="tns:ZwrocDepozytyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocInformacjeKontrahentaSoapIn">
+    <wsdl:part name="parameters" element="tns:ZwrocInformacjeKontrahenta" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocInformacjeKontrahentaSoapOut">
+    <wsdl:part name="parameters" element="tns:ZwrocInformacjeKontrahentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestSoapIn">
+    <wsdl:part name="parameters" element="tns:Test" />
+  </wsdl:message>
+  <wsdl:message name="TestSoapOut">
+    <wsdl:part name="parameters" element="tns:TestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZarejestrujPlanowaneZamowienieMCSoapIn">
+    <wsdl:part name="parameters" element="tns:ZarejestrujPlanowaneZamowienieMC" />
+  </wsdl:message>
+  <wsdl:message name="ZarejestrujPlanowaneZamowienieMCSoapOut">
+    <wsdl:part name="parameters" element="tns:ZarejestrujPlanowaneZamowienieMCResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZarejestrujPlanowaneZamowienieKOSoapIn">
+    <wsdl:part name="parameters" element="tns:ZarejestrujPlanowaneZamowienieKO" />
+  </wsdl:message>
+  <wsdl:message name="ZarejestrujPlanowaneZamowienieKOSoapOut">
+    <wsdl:part name="parameters" element="tns:ZarejestrujPlanowaneZamowienieKOResponse" />
+  </wsdl:message>
+  <wsdl:message name="AutoryzacjaKlientSoapIn">
+    <wsdl:part name="parameters" element="tns:AutoryzacjaKlient" />
+  </wsdl:message>
+  <wsdl:message name="AutoryzacjaKlientSoapOut">
+    <wsdl:part name="parameters" element="tns:AutoryzacjaKlientResponse" />
+  </wsdl:message>
+  <wsdl:message name="PotwierdzZamowienieSoapIn">
+    <wsdl:part name="parameters" element="tns:PotwierdzZamowienie" />
+  </wsdl:message>
+  <wsdl:message name="PotwierdzZamowienieSoapOut">
+    <wsdl:part name="parameters" element="tns:PotwierdzZamowienieResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocStringSoapIn">
+    <wsdl:part name="parameters" element="tns:ZwrocString" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocStringSoapOut">
+    <wsdl:part name="parameters" element="tns:ZwrocStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="AutoryzacjaKlientFiliaSoapIn">
+    <wsdl:part name="parameters" element="tns:AutoryzacjaKlientFilia" />
+  </wsdl:message>
+  <wsdl:message name="AutoryzacjaKlientFiliaSoapOut">
+    <wsdl:part name="parameters" element="tns:AutoryzacjaKlientFiliaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocNoweFakturySoapIn">
+    <wsdl:part name="parameters" element="tns:ZwrocNoweFaktury" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocNoweFakturySoapOut">
+    <wsdl:part name="parameters" element="tns:ZwrocNoweFakturyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocDaneFakturyDostawcySoapIn">
+    <wsdl:part name="parameters" element="tns:ZwrocDaneFakturyDostawcy" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocDaneFakturyDostawcySoapOut">
+    <wsdl:part name="parameters" element="tns:ZwrocDaneFakturyDostawcyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocDaneFakturyDostawcyKomisSoapIn">
+    <wsdl:part name="parameters" element="tns:ZwrocDaneFakturyDostawcyKomis" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocDaneFakturyDostawcyKomisSoapOut">
+    <wsdl:part name="parameters" element="tns:ZwrocDaneFakturyDostawcyKomisResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocPozycjeFakturyDostawcySoapIn">
+    <wsdl:part name="parameters" element="tns:ZwrocPozycjeFakturyDostawcy" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocPozycjeFakturyDostawcySoapOut">
+    <wsdl:part name="parameters" element="tns:ZwrocPozycjeFakturyDostawcyResponse" />
+  </wsdl:message>
+  <wsdl:message name="SprawdzPobranieFakturySoapIn">
+    <wsdl:part name="parameters" element="tns:SprawdzPobranieFaktury" />
+  </wsdl:message>
+  <wsdl:message name="SprawdzPobranieFakturySoapOut">
+    <wsdl:part name="parameters" element="tns:SprawdzPobranieFakturyResponse" />
+  </wsdl:message>
+  <wsdl:message name="PotwierdzenieOdbioruDokumentuSoapIn">
+    <wsdl:part name="parameters" element="tns:PotwierdzenieOdbioruDokumentu" />
+  </wsdl:message>
+  <wsdl:message name="PotwierdzenieOdbioruDokumentuSoapOut">
+    <wsdl:part name="parameters" element="tns:PotwierdzenieOdbioruDokumentuResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocDaneArtykuluSoapIn">
+    <wsdl:part name="parameters" element="tns:ZwrocDaneArtykulu" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocDaneArtykuluSoapOut">
+    <wsdl:part name="parameters" element="tns:ZwrocDaneArtykuluResponse" />
+  </wsdl:message>
+  <wsdl:message name="DajSlownikMarekSoapIn">
+    <wsdl:part name="parameters" element="tns:DajSlownikMarek" />
+  </wsdl:message>
+  <wsdl:message name="DajSlownikMarekSoapOut">
+    <wsdl:part name="parameters" element="tns:DajSlownikMarekResponse" />
+  </wsdl:message>
+  <wsdl:message name="DajSlownikGenerykowSoapIn">
+    <wsdl:part name="parameters" element="tns:DajSlownikGenerykow" />
+  </wsdl:message>
+  <wsdl:message name="DajSlownikGenerykowSoapOut">
+    <wsdl:part name="parameters" element="tns:DajSlownikGenerykowResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocStanySoapIn">
+    <wsdl:part name="parameters" element="tns:ZwrocStany" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocStanySoapOut">
+    <wsdl:part name="parameters" element="tns:ZwrocStanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocNaglowkiLZSoapIn">
+    <wsdl:part name="parameters" element="tns:ZwrocNaglowkiLZ" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocNaglowkiLZSoapOut">
+    <wsdl:part name="parameters" element="tns:ZwrocNaglowkiLZResponse" />
+  </wsdl:message>
+  <wsdl:message name="PobierzDaneLZSoapIn">
+    <wsdl:part name="parameters" element="tns:PobierzDaneLZ" />
+  </wsdl:message>
+  <wsdl:message name="PobierzDaneLZSoapOut">
+    <wsdl:part name="parameters" element="tns:PobierzDaneLZResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZapiszPobranieDanychLZSoapIn">
+    <wsdl:part name="parameters" element="tns:ZapiszPobranieDanychLZ" />
+  </wsdl:message>
+  <wsdl:message name="ZapiszPobranieDanychLZSoapOut">
+    <wsdl:part name="parameters" element="tns:ZapiszPobranieDanychLZResponse" />
+  </wsdl:message>
+  <wsdl:message name="InformacjaOKontrahencieSoapIn">
+    <wsdl:part name="parameters" element="tns:InformacjaOKontrahencie" />
+  </wsdl:message>
+  <wsdl:message name="InformacjaOKontrahencieSoapOut">
+    <wsdl:part name="parameters" element="tns:InformacjaOKontrahencieResponse" />
+  </wsdl:message>
+  <wsdl:message name="InvoiceCommisionSoapIn">
+    <wsdl:part name="parameters" element="tns:InvoiceCommision" />
+  </wsdl:message>
+  <wsdl:message name="InvoiceCommisionSoapOut">
+    <wsdl:part name="parameters" element="tns:InvoiceCommisionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZafakturujSprzedazKomisowaNewSoapIn">
+    <wsdl:part name="parameters" element="tns:ZafakturujSprzedazKomisowaNew" />
+  </wsdl:message>
+  <wsdl:message name="ZafakturujSprzedazKomisowaNewSoapOut">
+    <wsdl:part name="parameters" element="tns:ZafakturujSprzedazKomisowaNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZafakturujSprzedazKomisowaNewPrzygotowanieSoapIn">
+    <wsdl:part name="parameters" element="tns:ZafakturujSprzedazKomisowaNewPrzygotowanie" />
+  </wsdl:message>
+  <wsdl:message name="ZafakturujSprzedazKomisowaNewPrzygotowanieSoapOut">
+    <wsdl:part name="parameters" element="tns:ZafakturujSprzedazKomisowaNewPrzygotowanieResponse" />
+  </wsdl:message>
+  <wsdl:message name="WystawFakturaKoncowaKomisSoapIn">
+    <wsdl:part name="parameters" element="tns:WystawFakturaKoncowaKomis" />
+  </wsdl:message>
+  <wsdl:message name="WystawFakturaKoncowaKomisSoapOut">
+    <wsdl:part name="parameters" element="tns:WystawFakturaKoncowaKomisResponse" />
+  </wsdl:message>
+  <wsdl:message name="PobierzWzKomisowaSoapIn">
+    <wsdl:part name="parameters" element="tns:PobierzWzKomisowa" />
+  </wsdl:message>
+  <wsdl:message name="PobierzWzKomisowaSoapOut">
+    <wsdl:part name="parameters" element="tns:PobierzWzKomisowaResponse" />
+  </wsdl:message>
+  <wsdl:message name="PobierzWZKomisoweDoSkanowaniaSoapIn">
+    <wsdl:part name="parameters" element="tns:PobierzWZKomisoweDoSkanowania" />
+  </wsdl:message>
+  <wsdl:message name="PobierzWZKomisoweDoSkanowaniaSoapOut">
+    <wsdl:part name="parameters" element="tns:PobierzWZKomisoweDoSkanowaniaResponse" />
+  </wsdl:message>
+  <wsdl:message name="PobierzPozycjeWZKomisSoapIn">
+    <wsdl:part name="parameters" element="tns:PobierzPozycjeWZKomis" />
+  </wsdl:message>
+  <wsdl:message name="PobierzPozycjeWZKomisSoapOut">
+    <wsdl:part name="parameters" element="tns:PobierzPozycjeWZKomisResponse" />
+  </wsdl:message>
+  <wsdl:message name="PotwierdzPobranieWZKomisSoapIn">
+    <wsdl:part name="parameters" element="tns:PotwierdzPobranieWZKomis" />
+  </wsdl:message>
+  <wsdl:message name="PotwierdzPobranieWZKomisSoapOut">
+    <wsdl:part name="parameters" element="tns:PotwierdzPobranieWZKomisResponse" />
+  </wsdl:message>
+  <wsdl:message name="AnulujPobranieWZKomisowejSoapIn">
+    <wsdl:part name="parameters" element="tns:AnulujPobranieWZKomisowej" />
+  </wsdl:message>
+  <wsdl:message name="AnulujPobranieWZKomisowejSoapOut">
+    <wsdl:part name="parameters" element="tns:AnulujPobranieWZKomisowejResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocNiepobraneFakturyKomisoweSoapIn">
+    <wsdl:part name="parameters" element="tns:ZwrocNiepobraneFakturyKomisowe" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocNiepobraneFakturyKomisoweSoapOut">
+    <wsdl:part name="parameters" element="tns:ZwrocNiepobraneFakturyKomisoweResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocWartoscKomisuSoapIn">
+    <wsdl:part name="parameters" element="tns:ZwrocWartoscKomisu" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocWartoscKomisuSoapOut">
+    <wsdl:part name="parameters" element="tns:ZwrocWartoscKomisuResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocSkasowanePozycjeKomisSoapIn">
+    <wsdl:part name="parameters" element="tns:ZwrocSkasowanePozycjeKomis" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocSkasowanePozycjeKomisSoapOut">
+    <wsdl:part name="parameters" element="tns:ZwrocSkasowanePozycjeKomisResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocDokumentyPoGUIDSoapIn">
+    <wsdl:part name="parameters" element="tns:ZwrocDokumentyPoGUID" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocDokumentyPoGUIDSoapOut">
+    <wsdl:part name="parameters" element="tns:ZwrocDokumentyPoGUIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocWszystkiePozycjeKomisoweSoapIn">
+    <wsdl:part name="parameters" element="tns:ZwrocWszystkiePozycjeKomisowe" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocWszystkiePozycjeKomisoweSoapOut">
+    <wsdl:part name="parameters" element="tns:ZwrocWszystkiePozycjeKomisoweResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocDostawyKontrahentaSoapIn">
+    <wsdl:part name="parameters" element="tns:ZwrocDostawyKontrahenta" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocDostawyKontrahentaSoapOut">
+    <wsdl:part name="parameters" element="tns:ZwrocDostawyKontrahentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocDostawyKontrahentaModelSoapIn">
+    <wsdl:part name="parameters" element="tns:ZwrocDostawyKontrahentaModel" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocDostawyKontrahentaModelSoapOut">
+    <wsdl:part name="parameters" element="tns:ZwrocDostawyKontrahentaModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocSzczegolyZamowieniaModelSoapIn">
+    <wsdl:part name="parameters" element="tns:ZwrocSzczegolyZamowieniaModel" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocSzczegolyZamowieniaModelSoapOut">
+    <wsdl:part name="parameters" element="tns:ZwrocSzczegolyZamowieniaModelResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocSzczegolyZamowieniaListaSoapIn">
+    <wsdl:part name="parameters" element="tns:ZwrocSzczegolyZamowieniaLista" />
+  </wsdl:message>
+  <wsdl:message name="ZwrocSzczegolyZamowieniaListaSoapOut">
+    <wsdl:part name="parameters" element="tns:ZwrocSzczegolyZamowieniaListaResponse" />
+  </wsdl:message>
+  <wsdl:message name="WystawFaktureSoapIn">
+    <wsdl:part name="parameters" element="tns:WystawFakture" />
+  </wsdl:message>
+  <wsdl:message name="WystawFaktureSoapOut">
+    <wsdl:part name="parameters" element="tns:WystawFaktureResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDocuments" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZafakturujGuidSoapIn">
+    <wsdl:part name="parameters" element="tns:ZafakturujGuid" />
+  </wsdl:message>
+  <wsdl:message name="ZafakturujGuidSoapOut">
+    <wsdl:part name="parameters" element="tns:ZafakturujGuidResponse" />
+  </wsdl:message>
+  <wsdl:message name="SprawdzWersjeSoapIn">
+    <wsdl:part name="parameters" element="tns:SprawdzWersje" />
+  </wsdl:message>
+  <wsdl:message name="SprawdzWersjeSoapOut">
+    <wsdl:part name="parameters" element="tns:SprawdzWersjeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WSMotoKlientSoap">
+    <wsdl:operation name="ZwrocStanCeny">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Funkcja odczytuje stan towaru na magazynie, ceny: dla klienta i detaliczną oraz stawkę VAT</wsdl:documentation>
+      <wsdl:input message="tns:ZwrocStanCenySoapIn" />
+      <wsdl:output message="tns:ZwrocStanCenySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocStanCenyKarton">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Funkcja odczytuje stan towaru na magazynie, ceny: dla klienta i detaliczną oraz stawkę VAT (ceny kartonowe jeśli karton przypięty do artykułu)</wsdl:documentation>
+      <wsdl:input message="tns:ZwrocStanCenyKartonSoapIn" />
+      <wsdl:output message="tns:ZwrocStanCenyKartonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocStanCenyKOIP">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Funkcja wewnętrzna</wsdl:documentation>
+      <wsdl:input message="tns:ZwrocStanCenyKOIPSoapIn" />
+      <wsdl:output message="tns:ZwrocStanCenyKOIPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocStanCenyDostepnoscIP">
+      <wsdl:input message="tns:ZwrocStanCenyDostepnoscIPSoapIn" />
+      <wsdl:output message="tns:ZwrocStanCenyDostepnoscIPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocStanCenyDostepnosc">
+      <wsdl:input message="tns:ZwrocStanCenyDostepnoscSoapIn" />
+      <wsdl:output message="tns:ZwrocStanCenyDostepnoscSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocStanCenyPB">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Funkcja wewnętrzna</wsdl:documentation>
+      <wsdl:input message="tns:ZwrocStanCenyPBSoapIn" />
+      <wsdl:output message="tns:ZwrocStanCenyPBSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocStanCenySerwer">
+      <wsdl:input message="tns:ZwrocStanCenySerwerSoapIn" />
+      <wsdl:output message="tns:ZwrocStanCenySerwerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocNumeryFaktur">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Funkcja odczytuje numery faktur wystawionych kontrahentowi w danym dniu</wsdl:documentation>
+      <wsdl:input message="tns:ZwrocNumeryFakturSoapIn" />
+      <wsdl:output message="tns:ZwrocNumeryFakturSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocNumeryFakturFlota">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Funkcja wewnętrzna</wsdl:documentation>
+      <wsdl:input message="tns:ZwrocNumeryFakturFlotaSoapIn" />
+      <wsdl:output message="tns:ZwrocNumeryFakturFlotaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocNumeryLZ">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Funkcja odczytuje numery LZ wystawionych kontrahentowi w danym dniu</wsdl:documentation>
+      <wsdl:input message="tns:ZwrocNumeryLZSoapIn" />
+      <wsdl:output message="tns:ZwrocNumeryLZSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocNumeryFKZ">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Funkcja odczytuje numery FKZ wystawionych kontrahentowi w danym dniu</wsdl:documentation>
+      <wsdl:input message="tns:ZwrocNumeryFKZSoapIn" />
+      <wsdl:output message="tns:ZwrocNumeryFKZSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocPozycjeLZ">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Funkcja odczytuje pozycje LZ  o podanym identyfikatorze</wsdl:documentation>
+      <wsdl:input message="tns:ZwrocPozycjeLZSoapIn" />
+      <wsdl:output message="tns:ZwrocPozycjeLZSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocPozycjeFKZ">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Funkcja odczytuje pozycje FKZ  o podanym identyfikatorze</wsdl:documentation>
+      <wsdl:input message="tns:ZwrocPozycjeFKZSoapIn" />
+      <wsdl:output message="tns:ZwrocPozycjeFKZSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocPozycjeFaktury">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Funkcja odczytuje pozycje faktury o podanym numerze</wsdl:documentation>
+      <wsdl:input message="tns:ZwrocPozycjeFakturySoapIn" />
+      <wsdl:output message="tns:ZwrocPozycjeFakturySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocPozycjeFakturyFlota">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Funkcja odczytuje pozycje faktury o podanym numerze</wsdl:documentation>
+      <wsdl:input message="tns:ZwrocPozycjeFakturyFlotaSoapIn" />
+      <wsdl:output message="tns:ZwrocPozycjeFakturyFlotaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZamowTowary">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Funkcja składa zamówienie wg listy numerów motonet</wsdl:documentation>
+      <wsdl:input message="tns:ZamowTowarySoapIn" />
+      <wsdl:output message="tns:ZamowTowarySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZamowTowaryMultiMag">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Funkcja składa zamówienie wg listy numerów motonet.</wsdl:documentation>
+      <wsdl:input message="tns:ZamowTowaryMultiMagSoapIn" />
+      <wsdl:output message="tns:ZamowTowaryMultiMagSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZamowTowaryPrzekierowanie">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Funkcja składa zamówienie wg listy numerów motonet uwzględniając numer przekierowanego</wsdl:documentation>
+      <wsdl:input message="tns:ZamowTowaryPrzekierowanieSoapIn" />
+      <wsdl:output message="tns:ZamowTowaryPrzekierowanieSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZamowTowaryPB">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Funkcja wewnętrzna</wsdl:documentation>
+      <wsdl:input message="tns:ZamowTowaryPBSoapIn" />
+      <wsdl:output message="tns:ZamowTowaryPBSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZamowTowaryPBNrZamowienia">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Funkcja wewnętrzna</wsdl:documentation>
+      <wsdl:input message="tns:ZamowTowaryPBNrZamowieniaSoapIn" />
+      <wsdl:output message="tns:ZamowTowaryPBNrZamowieniaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZamowTowaryKOIPNrZamowienia">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Funkcja wewnętrzna</wsdl:documentation>
+      <wsdl:input message="tns:ZamowTowaryKOIPNrZamowieniaSoapIn" />
+      <wsdl:output message="tns:ZamowTowaryKOIPNrZamowieniaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZamowTowaryMC">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Funkcja wewnętrzna</wsdl:documentation>
+      <wsdl:input message="tns:ZamowTowaryMCSoapIn" />
+      <wsdl:output message="tns:ZamowTowaryMCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZamowTowaryGP">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Funkcja wewnętrzna</wsdl:documentation>
+      <wsdl:input message="tns:ZamowTowaryGPSoapIn" />
+      <wsdl:output message="tns:ZamowTowaryGPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZamowTowaryPBGP">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Funkcja wewnętrzna</wsdl:documentation>
+      <wsdl:input message="tns:ZamowTowaryPBGPSoapIn" />
+      <wsdl:output message="tns:ZamowTowaryPBGPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZamowTowaryMO">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Funkcja wewnętrzna</wsdl:documentation>
+      <wsdl:input message="tns:ZamowTowaryMOSoapIn" />
+      <wsdl:output message="tns:ZamowTowaryMOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZamowTowaryZPotwierdzeniemEmailKOIPUwagi">
+      <wsdl:input message="tns:ZamowTowaryZPotwierdzeniemEmailKOIPUwagiSoapIn" />
+      <wsdl:output message="tns:ZamowTowaryZPotwierdzeniemEmailKOIPUwagiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocDepozyty">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Funkcja zwraca ważne i zrealizowane depozyty na daną datę</wsdl:documentation>
+      <wsdl:input message="tns:ZwrocDepozytySoapIn" />
+      <wsdl:output message="tns:ZwrocDepozytySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocInformacjeKontrahenta">
+      <wsdl:input message="tns:ZwrocInformacjeKontrahentaSoapIn" />
+      <wsdl:output message="tns:ZwrocInformacjeKontrahentaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <wsdl:input message="tns:TestSoapIn" />
+      <wsdl:output message="tns:TestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZarejestrujPlanowaneZamowienieMC">
+      <wsdl:input message="tns:ZarejestrujPlanowaneZamowienieMCSoapIn" />
+      <wsdl:output message="tns:ZarejestrujPlanowaneZamowienieMCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZarejestrujPlanowaneZamowienieKO">
+      <wsdl:input message="tns:ZarejestrujPlanowaneZamowienieKOSoapIn" />
+      <wsdl:output message="tns:ZarejestrujPlanowaneZamowienieKOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AutoryzacjaKlient">
+      <wsdl:input message="tns:AutoryzacjaKlientSoapIn" />
+      <wsdl:output message="tns:AutoryzacjaKlientSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PotwierdzZamowienie">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Funkcja sprawdza czy zamówienie zostało złożone</wsdl:documentation>
+      <wsdl:input message="tns:PotwierdzZamowienieSoapIn" />
+      <wsdl:output message="tns:PotwierdzZamowienieSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocString">
+      <wsdl:input message="tns:ZwrocStringSoapIn" />
+      <wsdl:output message="tns:ZwrocStringSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AutoryzacjaKlientFilia">
+      <wsdl:input message="tns:AutoryzacjaKlientFiliaSoapIn" />
+      <wsdl:output message="tns:AutoryzacjaKlientFiliaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocNoweFaktury">
+      <wsdl:input message="tns:ZwrocNoweFakturySoapIn" />
+      <wsdl:output message="tns:ZwrocNoweFakturySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocDaneFakturyDostawcy">
+      <wsdl:input message="tns:ZwrocDaneFakturyDostawcySoapIn" />
+      <wsdl:output message="tns:ZwrocDaneFakturyDostawcySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocDaneFakturyDostawcyKomis">
+      <wsdl:input message="tns:ZwrocDaneFakturyDostawcyKomisSoapIn" />
+      <wsdl:output message="tns:ZwrocDaneFakturyDostawcyKomisSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocPozycjeFakturyDostawcy">
+      <wsdl:input message="tns:ZwrocPozycjeFakturyDostawcySoapIn" />
+      <wsdl:output message="tns:ZwrocPozycjeFakturyDostawcySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SprawdzPobranieFaktury">
+      <wsdl:input message="tns:SprawdzPobranieFakturySoapIn" />
+      <wsdl:output message="tns:SprawdzPobranieFakturySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PotwierdzenieOdbioruDokumentu">
+      <wsdl:input message="tns:PotwierdzenieOdbioruDokumentuSoapIn" />
+      <wsdl:output message="tns:PotwierdzenieOdbioruDokumentuSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocDaneArtykulu">
+      <wsdl:input message="tns:ZwrocDaneArtykuluSoapIn" />
+      <wsdl:output message="tns:ZwrocDaneArtykuluSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DajSlownikMarek">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zwraca słownik marek</wsdl:documentation>
+      <wsdl:input message="tns:DajSlownikMarekSoapIn" />
+      <wsdl:output message="tns:DajSlownikMarekSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DajSlownikGenerykow">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Zwraca słownik generyków</wsdl:documentation>
+      <wsdl:input message="tns:DajSlownikGenerykowSoapIn" />
+      <wsdl:output message="tns:DajSlownikGenerykowSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocStany">
+      <wsdl:input message="tns:ZwrocStanySoapIn" />
+      <wsdl:output message="tns:ZwrocStanySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocNaglowkiLZ">
+      <wsdl:input message="tns:ZwrocNaglowkiLZSoapIn" />
+      <wsdl:output message="tns:ZwrocNaglowkiLZSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PobierzDaneLZ">
+      <wsdl:input message="tns:PobierzDaneLZSoapIn" />
+      <wsdl:output message="tns:PobierzDaneLZSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZapiszPobranieDanychLZ">
+      <wsdl:input message="tns:ZapiszPobranieDanychLZSoapIn" />
+      <wsdl:output message="tns:ZapiszPobranieDanychLZSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InformacjaOKontrahencie">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Funkcja zwraca informacje o kontrahencie</wsdl:documentation>
+      <wsdl:input message="tns:InformacjaOKontrahencieSoapIn" />
+      <wsdl:output message="tns:InformacjaOKontrahencieSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InvoiceCommision">
+      <wsdl:input message="tns:InvoiceCommisionSoapIn" />
+      <wsdl:output message="tns:InvoiceCommisionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZafakturujSprzedazKomisowaNew">
+      <wsdl:input message="tns:ZafakturujSprzedazKomisowaNewSoapIn" />
+      <wsdl:output message="tns:ZafakturujSprzedazKomisowaNewSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZafakturujSprzedazKomisowaNewPrzygotowanie">
+      <wsdl:input message="tns:ZafakturujSprzedazKomisowaNewPrzygotowanieSoapIn" />
+      <wsdl:output message="tns:ZafakturujSprzedazKomisowaNewPrzygotowanieSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WystawFakturaKoncowaKomis">
+      <wsdl:input message="tns:WystawFakturaKoncowaKomisSoapIn" />
+      <wsdl:output message="tns:WystawFakturaKoncowaKomisSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PobierzWzKomisowa">
+      <wsdl:input message="tns:PobierzWzKomisowaSoapIn" />
+      <wsdl:output message="tns:PobierzWzKomisowaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PobierzWZKomisoweDoSkanowania">
+      <wsdl:input message="tns:PobierzWZKomisoweDoSkanowaniaSoapIn" />
+      <wsdl:output message="tns:PobierzWZKomisoweDoSkanowaniaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PobierzPozycjeWZKomis">
+      <wsdl:input message="tns:PobierzPozycjeWZKomisSoapIn" />
+      <wsdl:output message="tns:PobierzPozycjeWZKomisSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PotwierdzPobranieWZKomis">
+      <wsdl:input message="tns:PotwierdzPobranieWZKomisSoapIn" />
+      <wsdl:output message="tns:PotwierdzPobranieWZKomisSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AnulujPobranieWZKomisowej">
+      <wsdl:input message="tns:AnulujPobranieWZKomisowejSoapIn" />
+      <wsdl:output message="tns:AnulujPobranieWZKomisowejSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocNiepobraneFakturyKomisowe">
+      <wsdl:input message="tns:ZwrocNiepobraneFakturyKomisoweSoapIn" />
+      <wsdl:output message="tns:ZwrocNiepobraneFakturyKomisoweSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocWartoscKomisu">
+      <wsdl:input message="tns:ZwrocWartoscKomisuSoapIn" />
+      <wsdl:output message="tns:ZwrocWartoscKomisuSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocSkasowanePozycjeKomis">
+      <wsdl:input message="tns:ZwrocSkasowanePozycjeKomisSoapIn" />
+      <wsdl:output message="tns:ZwrocSkasowanePozycjeKomisSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocDokumentyPoGUID">
+      <wsdl:input message="tns:ZwrocDokumentyPoGUIDSoapIn" />
+      <wsdl:output message="tns:ZwrocDokumentyPoGUIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocWszystkiePozycjeKomisowe">
+      <wsdl:input message="tns:ZwrocWszystkiePozycjeKomisoweSoapIn" />
+      <wsdl:output message="tns:ZwrocWszystkiePozycjeKomisoweSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocDostawyKontrahenta">
+      <wsdl:input message="tns:ZwrocDostawyKontrahentaSoapIn" />
+      <wsdl:output message="tns:ZwrocDostawyKontrahentaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocDostawyKontrahentaModel">
+      <wsdl:input message="tns:ZwrocDostawyKontrahentaModelSoapIn" />
+      <wsdl:output message="tns:ZwrocDostawyKontrahentaModelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocSzczegolyZamowieniaModel">
+      <wsdl:input message="tns:ZwrocSzczegolyZamowieniaModelSoapIn" />
+      <wsdl:output message="tns:ZwrocSzczegolyZamowieniaModelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocSzczegolyZamowieniaLista">
+      <wsdl:input message="tns:ZwrocSzczegolyZamowieniaListaSoapIn" />
+      <wsdl:output message="tns:ZwrocSzczegolyZamowieniaListaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WystawFakture">
+      <wsdl:input message="tns:WystawFaktureSoapIn" />
+      <wsdl:output message="tns:WystawFaktureSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocuments">
+      <wsdl:input message="tns:GetDocumentsSoapIn" />
+      <wsdl:output message="tns:GetDocumentsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZafakturujGuid">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Fakturowanie po guidach, zwraca doksp_id</wsdl:documentation>
+      <wsdl:input message="tns:ZafakturujGuidSoapIn" />
+      <wsdl:output message="tns:ZafakturujGuidSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SprawdzWersje">
+      <wsdl:input message="tns:SprawdzWersjeSoapIn" />
+      <wsdl:output message="tns:SprawdzWersjeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSMotoKlientSoap" type="tns:WSMotoKlientSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ZwrocStanCeny">
+      <soap:operation soapAction="http://moto-profil.pl/ZwrocStanCeny" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocStanCenyKarton">
+      <soap:operation soapAction="http://moto-profil.pl/ZwrocStanCenyKarton" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocStanCenyKOIP">
+      <soap:operation soapAction="http://moto-profil.pl/ZwrocStanCenyKOIP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocStanCenyDostepnoscIP">
+      <soap:operation soapAction="http://moto-profil.pl/ZwrocStanCenyDostepnoscIP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocStanCenyDostepnosc">
+      <soap:operation soapAction="http://moto-profil.pl/ZwrocStanCenyDostepnosc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocStanCenyPB">
+      <soap:operation soapAction="http://moto-profil.pl/ZwrocStanCenyPB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocStanCenySerwer">
+      <soap:operation soapAction="http://moto-profil.pl/ZwrocStanCenySerwer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocNumeryFaktur">
+      <soap:operation soapAction="http://moto-profil.pl/ZwrocNumeryFaktur" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocNumeryFakturFlota">
+      <soap:operation soapAction="http://moto-profil.pl/ZwrocNumeryFakturFlota" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocNumeryLZ">
+      <soap:operation soapAction="http://moto-profil.pl/ZwrocNumeryLZ" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocNumeryFKZ">
+      <soap:operation soapAction="http://moto-profil.pl/ZwrocNumeryFKZ" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocPozycjeLZ">
+      <soap:operation soapAction="http://moto-profil.pl/ZwrocPozycjeLZ" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocPozycjeFKZ">
+      <soap:operation soapAction="http://moto-profil.pl/ZwrocPozycjeFKZ" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocPozycjeFaktury">
+      <soap:operation soapAction="http://moto-profil.pl/ZwrocPozycjeFaktury" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocPozycjeFakturyFlota">
+      <soap:operation soapAction="http://moto-profil.pl/ZwrocPozycjeFakturyFlota" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZamowTowary">
+      <soap:operation soapAction="http://moto-profil.pl/ZamowTowary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZamowTowaryMultiMag">
+      <soap:operation soapAction="http://moto-profil.pl/ZamowTowaryMultiMag" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZamowTowaryPrzekierowanie">
+      <soap:operation soapAction="http://moto-profil.pl/ZamowTowaryPrzekierowanie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZamowTowaryPB">
+      <soap:operation soapAction="http://moto-profil.pl/ZamowTowaryPB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZamowTowaryPBNrZamowienia">
+      <soap:operation soapAction="http://moto-profil.pl/ZamowTowaryPBNrZamowienia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZamowTowaryKOIPNrZamowienia">
+      <soap:operation soapAction="http://moto-profil.pl/ZamowTowaryKOIPNrZamowienia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZamowTowaryMC">
+      <soap:operation soapAction="http://moto-profil.pl/ZamowTowaryMC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZamowTowaryGP">
+      <soap:operation soapAction="http://moto-profil.pl/ZamowTowaryGP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZamowTowaryPBGP">
+      <soap:operation soapAction="http://moto-profil.pl/ZamowTowaryPBGP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZamowTowaryMO">
+      <soap:operation soapAction="http://moto-profil.pl/ZamowTowaryMO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZamowTowaryZPotwierdzeniemEmailKOIPUwagi">
+      <soap:operation soapAction="http://moto-profil.pl/ZamowTowaryZPotwierdzeniemEmailKOIPUwagi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocDepozyty">
+      <soap:operation soapAction="http://moto-profil.pl/ZwrocDepozyty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocInformacjeKontrahenta">
+      <soap:operation soapAction="http://moto-profil.pl/ZwrocInformacjeKontrahenta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <soap:operation soapAction="http://moto-profil.pl/Test" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZarejestrujPlanowaneZamowienieMC">
+      <soap:operation soapAction="http://moto-profil.pl/ZarejestrujPlanowaneZamowienieMC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZarejestrujPlanowaneZamowienieKO">
+      <soap:operation soapAction="http://moto-profil.pl/ZarejestrujPlanowaneZamowienieKO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoryzacjaKlient">
+      <soap:operation soapAction="http://moto-profil.pl/AutoryzacjaKlient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PotwierdzZamowienie">
+      <soap:operation soapAction="http://moto-profil.pl/PotwierdzZamowienie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocString">
+      <soap:operation soapAction="http://moto-profil.pl/ZwrocString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoryzacjaKlientFilia">
+      <soap:operation soapAction="http://moto-profil.pl/AutoryzacjaKlientFilia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocNoweFaktury">
+      <soap:operation soapAction="http://moto-profil.pl/ZwrocNoweFaktury" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocDaneFakturyDostawcy">
+      <soap:operation soapAction="http://moto-profil.pl/ZwrocDaneFakturyDostawcy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocDaneFakturyDostawcyKomis">
+      <soap:operation soapAction="http://moto-profil.pl/ZwrocDaneFakturyDostawcyKomis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocPozycjeFakturyDostawcy">
+      <soap:operation soapAction="http://moto-profil.pl/ZwrocPozycjeFakturyDostawcy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SprawdzPobranieFaktury">
+      <soap:operation soapAction="http://moto-profil.pl/SprawdzPobranieFaktury" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PotwierdzenieOdbioruDokumentu">
+      <soap:operation soapAction="http://moto-profil.pl/PotwierdzenieOdbioruDokumentu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocDaneArtykulu">
+      <soap:operation soapAction="http://moto-profil.pl/ZwrocDaneArtykulu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DajSlownikMarek">
+      <soap:operation soapAction="http://moto-profil.pl/DajSlownikMarek" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DajSlownikGenerykow">
+      <soap:operation soapAction="http://moto-profil.pl/DajSlownikGenerykow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocStany">
+      <soap:operation soapAction="http://moto-profil.pl/ZwrocStany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocNaglowkiLZ">
+      <soap:operation soapAction="http://moto-profil.pl/ZwrocNaglowkiLZ" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PobierzDaneLZ">
+      <soap:operation soapAction="http://moto-profil.pl/PobierzDaneLZ" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZapiszPobranieDanychLZ">
+      <soap:operation soapAction="http://moto-profil.pl/ZapiszPobranieDanychLZ" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InformacjaOKontrahencie">
+      <soap:operation soapAction="http://moto-profil.pl/InformacjaOKontrahencie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InvoiceCommision">
+      <soap:operation soapAction="http://moto-profil.pl/InvoiceCommision" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZafakturujSprzedazKomisowaNew">
+      <soap:operation soapAction="http://moto-profil.pl/ZafakturujSprzedazKomisowaNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZafakturujSprzedazKomisowaNewPrzygotowanie">
+      <soap:operation soapAction="http://moto-profil.pl/ZafakturujSprzedazKomisowaNewPrzygotowanie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WystawFakturaKoncowaKomis">
+      <soap:operation soapAction="http://moto-profil.pl/WystawFakturaKoncowaKomis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PobierzWzKomisowa">
+      <soap:operation soapAction="http://moto-profil.pl/PobierzWzKomisowa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PobierzWZKomisoweDoSkanowania">
+      <soap:operation soapAction="http://moto-profil.pl/PobierzWZKomisoweDoSkanowania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PobierzPozycjeWZKomis">
+      <soap:operation soapAction="http://moto-profil.pl/PobierzPozycjeWZKomis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PotwierdzPobranieWZKomis">
+      <soap:operation soapAction="http://moto-profil.pl/PotwierdzPobranieWZKomis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnulujPobranieWZKomisowej">
+      <soap:operation soapAction="http://moto-profil.pl/AnulujPobranieWZKomisowej" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocNiepobraneFakturyKomisowe">
+      <soap:operation soapAction="http://moto-profil.pl/ZwrocNiepobraneFakturyKomisowe" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocWartoscKomisu">
+      <soap:operation soapAction="http://moto-profil.pl/ZwrocWartoscKomisu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocSkasowanePozycjeKomis">
+      <soap:operation soapAction="http://moto-profil.pl/ZwrocSkasowanePozycjeKomis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocDokumentyPoGUID">
+      <soap:operation soapAction="http://moto-profil.pl/ZwrocDokumentyPoGUID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocWszystkiePozycjeKomisowe">
+      <soap:operation soapAction="http://moto-profil.pl/ZwrocWszystkiePozycjeKomisowe" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocDostawyKontrahenta">
+      <soap:operation soapAction="http://moto-profil.pl/ZwrocDostawyKontrahenta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocDostawyKontrahentaModel">
+      <soap:operation soapAction="http://moto-profil.pl/ZwrocDostawyKontrahentaModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocSzczegolyZamowieniaModel">
+      <soap:operation soapAction="http://moto-profil.pl/ZwrocSzczegolyZamowieniaModel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocSzczegolyZamowieniaLista">
+      <soap:operation soapAction="http://moto-profil.pl/ZwrocSzczegolyZamowieniaLista" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WystawFakture">
+      <soap:operation soapAction="http://moto-profil.pl/WystawFakture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocuments">
+      <soap:operation soapAction="http://moto-profil.pl/GetDocuments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZafakturujGuid">
+      <soap:operation soapAction="http://moto-profil.pl/ZafakturujGuid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SprawdzWersje">
+      <soap:operation soapAction="http://moto-profil.pl/SprawdzWersje" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSMotoKlientSoap12" type="tns:WSMotoKlientSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ZwrocStanCeny">
+      <soap12:operation soapAction="http://moto-profil.pl/ZwrocStanCeny" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocStanCenyKarton">
+      <soap12:operation soapAction="http://moto-profil.pl/ZwrocStanCenyKarton" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocStanCenyKOIP">
+      <soap12:operation soapAction="http://moto-profil.pl/ZwrocStanCenyKOIP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocStanCenyDostepnoscIP">
+      <soap12:operation soapAction="http://moto-profil.pl/ZwrocStanCenyDostepnoscIP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocStanCenyDostepnosc">
+      <soap12:operation soapAction="http://moto-profil.pl/ZwrocStanCenyDostepnosc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocStanCenyPB">
+      <soap12:operation soapAction="http://moto-profil.pl/ZwrocStanCenyPB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocStanCenySerwer">
+      <soap12:operation soapAction="http://moto-profil.pl/ZwrocStanCenySerwer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocNumeryFaktur">
+      <soap12:operation soapAction="http://moto-profil.pl/ZwrocNumeryFaktur" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocNumeryFakturFlota">
+      <soap12:operation soapAction="http://moto-profil.pl/ZwrocNumeryFakturFlota" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocNumeryLZ">
+      <soap12:operation soapAction="http://moto-profil.pl/ZwrocNumeryLZ" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocNumeryFKZ">
+      <soap12:operation soapAction="http://moto-profil.pl/ZwrocNumeryFKZ" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocPozycjeLZ">
+      <soap12:operation soapAction="http://moto-profil.pl/ZwrocPozycjeLZ" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocPozycjeFKZ">
+      <soap12:operation soapAction="http://moto-profil.pl/ZwrocPozycjeFKZ" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocPozycjeFaktury">
+      <soap12:operation soapAction="http://moto-profil.pl/ZwrocPozycjeFaktury" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocPozycjeFakturyFlota">
+      <soap12:operation soapAction="http://moto-profil.pl/ZwrocPozycjeFakturyFlota" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZamowTowary">
+      <soap12:operation soapAction="http://moto-profil.pl/ZamowTowary" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZamowTowaryMultiMag">
+      <soap12:operation soapAction="http://moto-profil.pl/ZamowTowaryMultiMag" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZamowTowaryPrzekierowanie">
+      <soap12:operation soapAction="http://moto-profil.pl/ZamowTowaryPrzekierowanie" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZamowTowaryPB">
+      <soap12:operation soapAction="http://moto-profil.pl/ZamowTowaryPB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZamowTowaryPBNrZamowienia">
+      <soap12:operation soapAction="http://moto-profil.pl/ZamowTowaryPBNrZamowienia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZamowTowaryKOIPNrZamowienia">
+      <soap12:operation soapAction="http://moto-profil.pl/ZamowTowaryKOIPNrZamowienia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZamowTowaryMC">
+      <soap12:operation soapAction="http://moto-profil.pl/ZamowTowaryMC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZamowTowaryGP">
+      <soap12:operation soapAction="http://moto-profil.pl/ZamowTowaryGP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZamowTowaryPBGP">
+      <soap12:operation soapAction="http://moto-profil.pl/ZamowTowaryPBGP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZamowTowaryMO">
+      <soap12:operation soapAction="http://moto-profil.pl/ZamowTowaryMO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZamowTowaryZPotwierdzeniemEmailKOIPUwagi">
+      <soap12:operation soapAction="http://moto-profil.pl/ZamowTowaryZPotwierdzeniemEmailKOIPUwagi" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocDepozyty">
+      <soap12:operation soapAction="http://moto-profil.pl/ZwrocDepozyty" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocInformacjeKontrahenta">
+      <soap12:operation soapAction="http://moto-profil.pl/ZwrocInformacjeKontrahenta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <soap12:operation soapAction="http://moto-profil.pl/Test" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZarejestrujPlanowaneZamowienieMC">
+      <soap12:operation soapAction="http://moto-profil.pl/ZarejestrujPlanowaneZamowienieMC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZarejestrujPlanowaneZamowienieKO">
+      <soap12:operation soapAction="http://moto-profil.pl/ZarejestrujPlanowaneZamowienieKO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoryzacjaKlient">
+      <soap12:operation soapAction="http://moto-profil.pl/AutoryzacjaKlient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PotwierdzZamowienie">
+      <soap12:operation soapAction="http://moto-profil.pl/PotwierdzZamowienie" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocString">
+      <soap12:operation soapAction="http://moto-profil.pl/ZwrocString" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoryzacjaKlientFilia">
+      <soap12:operation soapAction="http://moto-profil.pl/AutoryzacjaKlientFilia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocNoweFaktury">
+      <soap12:operation soapAction="http://moto-profil.pl/ZwrocNoweFaktury" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocDaneFakturyDostawcy">
+      <soap12:operation soapAction="http://moto-profil.pl/ZwrocDaneFakturyDostawcy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocDaneFakturyDostawcyKomis">
+      <soap12:operation soapAction="http://moto-profil.pl/ZwrocDaneFakturyDostawcyKomis" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocPozycjeFakturyDostawcy">
+      <soap12:operation soapAction="http://moto-profil.pl/ZwrocPozycjeFakturyDostawcy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SprawdzPobranieFaktury">
+      <soap12:operation soapAction="http://moto-profil.pl/SprawdzPobranieFaktury" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PotwierdzenieOdbioruDokumentu">
+      <soap12:operation soapAction="http://moto-profil.pl/PotwierdzenieOdbioruDokumentu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocDaneArtykulu">
+      <soap12:operation soapAction="http://moto-profil.pl/ZwrocDaneArtykulu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DajSlownikMarek">
+      <soap12:operation soapAction="http://moto-profil.pl/DajSlownikMarek" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DajSlownikGenerykow">
+      <soap12:operation soapAction="http://moto-profil.pl/DajSlownikGenerykow" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocStany">
+      <soap12:operation soapAction="http://moto-profil.pl/ZwrocStany" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocNaglowkiLZ">
+      <soap12:operation soapAction="http://moto-profil.pl/ZwrocNaglowkiLZ" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PobierzDaneLZ">
+      <soap12:operation soapAction="http://moto-profil.pl/PobierzDaneLZ" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZapiszPobranieDanychLZ">
+      <soap12:operation soapAction="http://moto-profil.pl/ZapiszPobranieDanychLZ" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InformacjaOKontrahencie">
+      <soap12:operation soapAction="http://moto-profil.pl/InformacjaOKontrahencie" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InvoiceCommision">
+      <soap12:operation soapAction="http://moto-profil.pl/InvoiceCommision" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZafakturujSprzedazKomisowaNew">
+      <soap12:operation soapAction="http://moto-profil.pl/ZafakturujSprzedazKomisowaNew" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZafakturujSprzedazKomisowaNewPrzygotowanie">
+      <soap12:operation soapAction="http://moto-profil.pl/ZafakturujSprzedazKomisowaNewPrzygotowanie" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WystawFakturaKoncowaKomis">
+      <soap12:operation soapAction="http://moto-profil.pl/WystawFakturaKoncowaKomis" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PobierzWzKomisowa">
+      <soap12:operation soapAction="http://moto-profil.pl/PobierzWzKomisowa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PobierzWZKomisoweDoSkanowania">
+      <soap12:operation soapAction="http://moto-profil.pl/PobierzWZKomisoweDoSkanowania" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PobierzPozycjeWZKomis">
+      <soap12:operation soapAction="http://moto-profil.pl/PobierzPozycjeWZKomis" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PotwierdzPobranieWZKomis">
+      <soap12:operation soapAction="http://moto-profil.pl/PotwierdzPobranieWZKomis" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnulujPobranieWZKomisowej">
+      <soap12:operation soapAction="http://moto-profil.pl/AnulujPobranieWZKomisowej" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocNiepobraneFakturyKomisowe">
+      <soap12:operation soapAction="http://moto-profil.pl/ZwrocNiepobraneFakturyKomisowe" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocWartoscKomisu">
+      <soap12:operation soapAction="http://moto-profil.pl/ZwrocWartoscKomisu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocSkasowanePozycjeKomis">
+      <soap12:operation soapAction="http://moto-profil.pl/ZwrocSkasowanePozycjeKomis" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocDokumentyPoGUID">
+      <soap12:operation soapAction="http://moto-profil.pl/ZwrocDokumentyPoGUID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocWszystkiePozycjeKomisowe">
+      <soap12:operation soapAction="http://moto-profil.pl/ZwrocWszystkiePozycjeKomisowe" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocDostawyKontrahenta">
+      <soap12:operation soapAction="http://moto-profil.pl/ZwrocDostawyKontrahenta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocDostawyKontrahentaModel">
+      <soap12:operation soapAction="http://moto-profil.pl/ZwrocDostawyKontrahentaModel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocSzczegolyZamowieniaModel">
+      <soap12:operation soapAction="http://moto-profil.pl/ZwrocSzczegolyZamowieniaModel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZwrocSzczegolyZamowieniaLista">
+      <soap12:operation soapAction="http://moto-profil.pl/ZwrocSzczegolyZamowieniaLista" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WystawFakture">
+      <soap12:operation soapAction="http://moto-profil.pl/WystawFakture" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocuments">
+      <soap12:operation soapAction="http://moto-profil.pl/GetDocuments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZafakturujGuid">
+      <soap12:operation soapAction="http://moto-profil.pl/ZafakturujGuid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SprawdzWersje">
+      <soap12:operation soapAction="http://moto-profil.pl/SprawdzWersje" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSMotoKlient">
+    <wsdl:port name="WSMotoKlientSoap" binding="tns:WSMotoKlientSoap">
+      <soap:address location="https://195.242.186.16/MotoBiznesWS/WSMotoKlient.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WSMotoKlientSoap12" binding="tns:WSMotoKlientSoap12">
+      <soap12:address location="https://195.242.186.16/MotoBiznesWS/WSMotoKlient.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
