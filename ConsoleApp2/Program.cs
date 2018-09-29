@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace ConsoleApp2
 {
@@ -10,23 +11,39 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            DateTime value = new DateTime(2018,09,26);
+            DateTime value = new DateTime(2018, 09, 26);
+            string BapPrisijungimai = "Config.txt";
+            string Rezultatas = @"C:\Rezultatas.txt";
+            string pakeistiIs = "/";
+            string pakeistiI = "";
+
             MotoWeb.WSMotoKlientSoap client = new MotoWeb.WSMotoKlientSoapClient();
-            
-            foreach (var val in client.ZwrocNumeryFaktur("11263", "01IH", value))
+
+            File.WriteAllText(Rezultatas, string.Empty);
+
+            var BazineEilute = string.Format("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\t{7}\n", "DOK_SERIJA_IR_NUMERIS", "DOK_DATA",
+                "DOK_APMOKTERMINAS", "DOK_SUMASUPVM", "DOK_SKYRIUS", "PREK_PAVADINIMAS", "PREK_KIEKIS", "PREK_KAINA");
+            File.AppendAllText(Rezultatas, BazineEilute);
+
+            foreach (string line in File.ReadAllLines(BapPrisijungimai))
             {
-                Console.WriteLine(val);
-                foreach (var pavadinimas in client.ZwrocPozycjeFaktury("11263", "01IH", "FA 119417/09/2018/U"))
+                string[] BapKlientai = line.Split('|');
+
+                foreach (var val in client.ZwrocNumeryFaktur(BapKlientai[0], BapKlientai[1], value))
                 {
-                    Console.WriteLine(pavadinimas);
+                    string[] poViena = val.Split('|');
+
+                    foreach (var pavadinimas in client.ZwrocPozycjeFaktury(BapKlientai[0], BapKlientai[1], poViena[0]))
+                    {
+                        string[] poViena_1 = pavadinimas.Split('|');
+
+                        var NaujaEilute = string.Format("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\t{7}\n", poViena[0].Remove(2,1).Replace(pakeistiIs, pakeistiI), poViena[4], poViena[5],
+                            poViena[1], BapKlientai[2], poViena_1[2], poViena_1[3], poViena_1[4]);
+                        
+                        File.AppendAllText(Rezultatas, NaujaEilute);
+                    }
                 }
             }
-
-            foreach (var val in client.ZwrocNumeryFaktur("11263", "01IE", value))
-            {
-                Console.WriteLine(val);
-            }
-            Console.ReadLine();
         }
     }
 }

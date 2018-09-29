@@ -1,0 +1,7 @@
+C:\Users\Arturas\source\repos\ConsoleApp2\ConsoleApp2\bin\Release\Config.txt
+C:\Users\Arturas\source\repos\ConsoleApp2\ConsoleApp2\bin\Release\ConsoleApp2.exe.config
+C:\Users\Arturas\source\repos\ConsoleApp2\ConsoleApp2\bin\Release\ConsoleApp2.exe
+C:\Users\Arturas\source\repos\ConsoleApp2\ConsoleApp2\bin\Release\ConsoleApp2.pdb
+C:\Users\Arturas\source\repos\ConsoleApp2\ConsoleApp2\obj\Release\ConsoleApp2.csproj.CoreCompileInputs.cache
+C:\Users\Arturas\source\repos\ConsoleApp2\ConsoleApp2\obj\Release\ConsoleApp2.exe
+C:\Users\Arturas\source\repos\ConsoleApp2\ConsoleApp2\obj\Release\ConsoleApp2.pdb
